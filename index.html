@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>水草與氣泡</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden; /* 防止頁面滾動條 */
+        }
+        #background-iframe {
+            position: absolute; /* 絕對定位 */
+            top: 0;
+            left: 0;
+            width: 100%; /* 寬度充滿視窗 */
+            height: 100%; /* 高度充滿視窗 */
+            border: none; /* 移除邊框 */
+            z-index: -1; /* 將 iframe 放在最底層 */
+        }
+        canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            display: block; /* 移除 canvas 下方的額外空間 */
+            pointer-events: none; /* 讓滑鼠事件穿透 canvas，以便操作 iframe */
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+    <script src="sketch.js"></script>
+</head>
+<body>
+    <iframe id="background-iframe" src="https://www.et.tku.edu.tw"></iframe>
+</body>
+</html>
